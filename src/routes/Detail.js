@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import { deleteToDo } from "../store";
+import { remove } from "../store";
 
 function Detail() {
   const toDo = useSelector((state) => state);
@@ -12,7 +12,7 @@ function Detail() {
   const dispatch = useDispatch();
 
   const onBtnClick = () => {
-    dispatch(deleteToDo(id));
+    dispatch(remove(id));
   };
 
   return (
